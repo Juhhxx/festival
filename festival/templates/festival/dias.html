@@ -7,7 +7,7 @@
 
     {% for concerto in dia.concertos.all %}
         <article class="card">
-            <a href="">{{ concerto.banda.nome }} - {{ concerto.palco }}</a>
+            <a href="{% url 'concerto' concerto.id %}">{{ concerto.banda.nome }} - {{ concerto.palco }}</a>
         </article>
     {% endfor %}
 
